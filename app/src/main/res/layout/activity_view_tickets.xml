@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/viewTicketsLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="www.siteurl.in.srsadmin.activities.ViewTickets">
+
+    <include
+        android:id="@+id/view_tickets_toolbar"
+        layout="@layout/main_toolbar" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_tickets_toolbar"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/noTickets"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:text=" :( Looks Like No Tickets To Show"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@+id/ticketList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp">
+
+        </ListView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

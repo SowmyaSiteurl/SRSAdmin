@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:context="www.siteurl.in.srsadmin.activities.TicketDetailsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/adminReplyLayout"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/view_tickets_toolbar"
+            layout="@layout/main_toolbar" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_tickets_toolbar"
+            android:background="#FFFFFF"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/adminTicketName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Ticket Name"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/adminTicketSubject"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/adminTicketName"
+                        android:layout_marginLeft="10dp"
+                        android:text="Ticket Name"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/adminTicketDesc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/adminTicketSubject"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:text="Ticket Description"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/adminTicketDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/adminAssignedTo"
+                        android:layout_marginRight="10dp"
+                        android:text="Date"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:id="@+id/adminAssignedTo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Assign a Ticket ->"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/Ticketstatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="false"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/adminTicketDate"
+                        android:layout_marginRight="10dp"
+                        android:text="Status"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+        <ListView
+            android:id="@+id/adminTicketList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            tools:listitem="@layout/chat_details"
+            android:layout_below="@+id/cardview"
+            android:divider="@android:color/white"
+            android:dividerHeight="5dp">
+
+        </ListView>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/adminReplyLayout"
+        android:layout_width="match_parent"
+        android:layout_height="126dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true">
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/adminMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:hint="Enter Message"
+            android:inputType="text"
+            android:letterSpacing="0.025"
+            android:text=""
+            android:textColor="@color/blackColor"
+            android:textColorHint="@color/blackColor"
+            android:textSize="18sp"
+            app:met_baseColor="@color/blackColor"
+            app:met_floatingLabel="highlight"
+            app:met_primaryColor="@color/blackColor"
+            app:met_singleLineEllipsis="true" />
+
+
+        <CheckBox
+            android:id="@+id/internal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/adminSubmit"
+            android:layout_alignBottom="@+id/adminSubmit"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="right"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:text="Internal" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/adminMessage"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/adminSubmit"
+            android:background="@android:drawable/btn_dropdown"
+            android:popupBackground="@android:color/white"
+            android:scrollbars="none"
+            android:spinnerMode="dropdown"
+            android:textSize="12sp" />
+
+
+        <Button
+            android:id="@+id/adminSubmit"
+            android:layout_width="80dp"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/adminMessage"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/btn_signin_background"
+            android:text="Submit"
+            android:textSize="12sp" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_info_outline_white_48dp"
+        android:id="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/noInternet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/imageView"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/noInternet"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/tryAgain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/noInternet"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="40dp"
+        android:background="@android:color/white"
+        android:text="Try Again"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/noInternet"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="40dp"
+        android:background="@android:color/white"
+        android:text="EXIT"
+        android:textColor="@color/colorAccent"
+        android:visibility="visible" />
+
+</RelativeLayout>

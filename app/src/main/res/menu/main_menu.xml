@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/view_profile"
+            android:icon="@drawable/ic_perm_identity_black_24dp"
+            android:title="My Profile" />
+
+        <item
+            android:id="@+id/add_staff"
+            android:icon="@drawable/ic_group_add_black_24dp"
+            android:title="Add Staff" />
+
+        <item
+            android:id="@+id/staff_list"
+            android:icon="@drawable/ic_group_black_24dp"
+            android:title="Staff List" />
+
+
+        <item
+            android:id="@+id/view_unassigned_tickets"
+            android:icon="@drawable/ic_assignment_black_24dp"
+            android:title="New Tickets" />
+
+        <item
+            android:id="@+id/view_hold_tickets"
+            android:icon="@drawable/ic_assignment_black_24dp"
+            android:title="Tickets On Hold" />
+
+        <item
+            android:id="@+id/view_open_tickets"
+            android:icon="@drawable/ic_open_in_new_black_24dp"
+            android:title="Open Tickets" />
+
+        <item
+            android:id="@+id/view_close_tickets"
+            android:icon="@drawable/ic_close_black_24dp"
+            android:title="Closed Tickets" />
+
+    </group>
+
+    <item android:title="Other">
+        <menu>
+
+            <item
+                android:id="@+id/srs_change_password"
+                android:icon="@drawable/ic_build_black_24dp"
+                android:title="Change Password" />
+
+            <item
+                android:id="@+id/logout_menu"
+                android:icon="@drawable/ic_power_settings_new_black_24dp"
+                android:title="Logout" />
+
+        </menu>
+    </item>
+
+</menu>
